@@ -35,3 +35,20 @@ console.log(myArray); // Muestra todo el contenido del array, el número, la cad
 myArray[2][myKey](); // Invoca la función mouseOver usando la "key" que antes tenía asignado mouseOver
 
 myArray[3](); // Ejecución de la función dentro del array, imprime el mensaje "Hola desde el array"
+
+
+//Array de funciones
+let funcArray = [];
+funcArray.push(() => {
+    console.log('Function 1');
+});
+funcArray.push(() => {
+    console.log('Function 2');
+});
+funcArray.push(() => {
+    console.log('Function 3');
+});
+
+funcArray.forEach((item) => { // A cada elemento del array se le guarda en item
+    item(); // Ejecuta cada elemento del array
+});
