@@ -12,3 +12,11 @@ emtr.on('greet', () => {
 console.log('Hello!');
 emtr.emit('greet'); 
 // Al ejecutar el evento se ejecutan los dos que se agregaron anteriormente, debido a que ambos son el mismo tipo de eventos
+
+
+emtr.on('jump', () => {
+    console.log('someone jumped!');
+});
+
+console.log(emtr); // emtr contiene dos tipos de eventos: 1. greet, el cual activa 2 funciones anónimos; 2. jump, este solo activa una función anónimo
+emtr.emit('jump');
